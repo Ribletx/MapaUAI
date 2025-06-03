@@ -28,22 +28,22 @@ const BuildingMap = () => {
       {
         id: 'studyRoom',
         label: translations[language].studyRoom,
-        style: 'top-[62%] left-[13%]',
+        style: 'top-[62%] left-[18%]',
       },
       {
         id: '104',
         label: '104',
-        style: 'top-[44%] left-[7%]',
+        style: 'top-[44%] left-[13%]',
       },
       {
         id: 'bathroom',
         label: translations[language].bathroom,
-        style: 'top-[41%] left-[50%]',
+        style: 'top-[38%] left-[45%]',
       },
       {
         id: 'cafeteria',
         label: translations[language].cafeteria,
-        style: 'top-[46%] right-[6%]',
+        style: 'top-[46%] right-[19%]',
       },
     ];
 
@@ -63,7 +63,7 @@ const BuildingMap = () => {
 
         <div className="relative flex-grow bg-gray-100">
           <img 
-            src="https://4tsix0yujj.ufs.sh/f/2vMRHqOYUHc0oQxeRBgDjdvqUQH6XhKYIiaSc3LCtrM1fen0" 
+            src="/PlanoF.jpeg" 
             alt="Planta del edificio" 
             className="w-full h-full object-contain"
           />
