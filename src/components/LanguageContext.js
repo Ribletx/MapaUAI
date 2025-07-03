@@ -7,8 +7,8 @@ export const LanguageProvider = ({ children }) => {
 
   const translations = {
     es: {
-      headerTitle: 'Mapa Interactivo UAI',
-      searchPlaceholder: 'Buscar habitación...',
+      headerTitle: 'Mapa',
+      searchPlaceholder: 'Buscar',
       homeButton: 'Inicio',
       backButton: 'Atrás',
       footerText: 'Mapa UAI © 2025',

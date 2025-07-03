@@ -122,7 +122,7 @@ const BuildingMap = () => {
               <select 
                 value={language}
                 onChange={(e) => setLanguage(e.target.value)}
-                className="bg-white rounded-md px-2 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="bg-white px-2 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
               >
                 <option value="es">🇪🇸 ES</option>
                 <option value="en">🇬🇧 EN</option>
@@ -135,7 +135,7 @@ const BuildingMap = () => {
               <select
                 value={selectedBuilding}
                 onChange={(e) => setSelectedBuilding(e.target.value)}
-                className="flex-1 px-3 py-2 bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="flex-1 px-3 py-2 bg-white border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
               >
                 <option value="">Edificio</option>
                 <option value="edificio-a">Edificio A</option>
@@ -147,7 +147,7 @@ const BuildingMap = () => {
               <select
                 value={selectedFloor}
                 onChange={(e) => setSelectedFloor(e.target.value)}
-                className="flex-1 px-3 py-2 bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="flex-1 px-3 py-2 bg-white border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
               >
                 <option value="">Piso</option>
                 <option value="piso-1">Piso 1</option>
@@ -164,7 +164,7 @@ const BuildingMap = () => {
                 placeholder={translations[language].searchPlaceholder || 'Buscar salas...'}
                 value={searchQuery}
                 onChange={(e) => handleSearch(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 border-2 border-[#009ee2]"
+                className="w-full pl-10 pr-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 border-2 border-[#009ee2]"
                 style={{ borderColor: '#009ee2' }}
               />
               <div className="absolute left-3 top-3.5 text-gray-400">
@@ -181,7 +181,7 @@ const BuildingMap = () => {
                 <button
                   key={category.key}
                   onClick={() => handleCategoryClick(category.key)}
-                  className={`w-full text-left p-3 rounded-lg transition-colors ${
+                  className={`w-full text-left p-3 transition-colors ${
                     searchQuery.includes(category.key) 
                       ? 'bg-blue-100 text-blue-800' 
                       : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
@@ -199,7 +199,7 @@ const BuildingMap = () => {
             {searchQuery && (
               <button
                 onClick={() => setSearchQuery('')}
-                className="w-full mt-4 p-2 text-sm text-gray-600 hover:text-gray-800 rounded-lg hover:bg-gray-50 transition-colors"
+                className="w-full mt-4 p-2 text-sm text-gray-600 hover:text-gray-800 hover:bg-gray-50 transition-colors"
               >
                 Limpiar búsqueda
               </button>
@@ -220,7 +220,7 @@ const BuildingMap = () => {
             <button
               key={id}
               onClick={() => handleRoomClick(id)}
-              className={`absolute ${style} bg-white bg-opacity-90 hover:bg-opacity-100 px-4 py-2 rounded-lg shadow-md transition-all hover:shadow-lg hover:scale-105`}
+              className={`absolute ${style} bg-white bg-opacity-90 hover:bg-opacity-100 px-4 py-2 shadow-md transition-all hover:shadow-lg hover:scale-105`}
             >
               {label}
             </button>
@@ -229,7 +229,7 @@ const BuildingMap = () => {
           {/* No results message */}
           {searchQuery && filteredButtons.length === 0 && (
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="bg-white p-6 rounded-lg shadow-lg">
+              <div className="bg-white p-6 shadow-lg">
                 <p className="text-gray-600">No se encontraron resultados para "{searchQuery}"</p>
               </div>
             </div>
